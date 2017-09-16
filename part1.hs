@@ -78,6 +78,48 @@ lastPrime = last morePrimes2
 firstPrimes = take 3 morePrimes2
 -- Get the inverse of x values in a list
 removedPrimes = drop 3 morePrimes2
+-- Is x in List
+is7InList = 7 `elem` morePrimes2
+-- Get max element value
+maxPrime = maximum morePrimes2
+-- Get min element value
+minPrim = minimum morePrimes2
+-- Get the product of all elements
+prodPrimes = product morePrimes2
+-- Make list of even numbers
+evenList = [2,4..20]
+-- Character List
+letterList = ['A', 'B'..'Z']
+-- Create an infinite list (lazily calculates requested values from an infinite sequence)
+infinPow10 = [10,20..]
+-- Repeat value in a List
+many2s = take 10 (repeat 2)
+-- Replicate a value
+many3s = replicate 10 3
+-- Cycle through values
+cycleList = take 10 (cycle [1,2,3,4,5])
+-- Multiply all values by a factor
+listTimes2 = [x * 2 | x <- [1..10]]
+-- Multiply all values by a factor and conditionally filter values less than 50
+listTimes3 = [x * 3 | x <- [1..10], x * 3 <= 50]
+-- Take the set of numbers 1 to 500, filter values divisble by 13, filter values divisible by 9
+divisBy9N13 = [x | x <- [1..500], x `mod` 13 == 0, x `mod` 9 == 0]
+-- Create a sorted list
+sortedList = sort [9,1,8,3,4,7,6]
+-- Use a math operation of elements in multiple lists
+sumOfLists = zipWith (+) [1,2,3,4,5] [6,7,8,9,10]
+-- Simple conditional filter
+listBiggerThen5 = filter (>5) morePrimes
+-- Take from a generated list values matching a condition
+eventsUpTo20 = takeWhile (<= 20) [2,4..]
+-- Sequentially run an operation on elements of a list
+multOfList = foldl (*) 1 [2,3,4,5]
+-- perform any operation on each element in a list
+pow3List = [3^n | n <- [1..10]]
+-- Recursively create lists by sequentially performing an operation on every combination of elements in those lists.
+-- This example, when represented as a matrix creates a multiplication table for 1-10
+multTable = [[x * y | y <- [1..10]] | x <- [1..10]]
+
 
 
 -- MATH OPERATORS
