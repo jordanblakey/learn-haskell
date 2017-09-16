@@ -2,6 +2,25 @@
 ## About Haskell
 Haskell is a standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing. It is named after logician Haskell Curry. The latest standard of Haskell is Haskell 2010. Haskell features a type system with type inference and lazy evaluation. Type classes first appeared in the Haskell programming language.
 
+<hr>
+
+## GHC Compiler Commands
+
+**Run the interactive compiler**<br>
+`ghci`: start<br>
+  `l:` load<br>
+  `r:` run file, reload<br>
+  `t:` get a functions definition<br>
+  `q:` quit
+
+**Compile a Haskell file to executable**<br>
+`ghc --make part1.hs`
+
+**Execute a program<br>**
+`./program`
+
+<hr>
+
 ## Features of Haskell
 #### Statically typed
 Every expression in Haskell has a type which is determined at compile time. All the types composed together by function application have to match up. If they don't, the program will be rejected by the compiler. Types become not only a form of guarantee, but a language for expressing the construction of programs.

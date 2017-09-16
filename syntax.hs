@@ -8,6 +8,22 @@ multiline comment.
 import Data.List
 import System.IO
 
+-- GHC COMPILER
+----------------------
+-- Run the interactive compiler
+-- ghci
+  -- l: load
+  -- r: run
+  -- t: get a functions definition
+  -- q: quit
+
+-- Compile a Haskell file to executable
+-- ghc --make part1.hs
+
+-- Execute a program
+-- ./program
+
+
 --  DATA TYPES
 ----------------------
 -- Note: Initialization vs assignment
@@ -45,6 +61,80 @@ boolean = True :: Bool
 -- List of any type
 -- Error: not in scope: type constructor or class 'Tuple'
 -- tuple = [1, 2, 3] :: Tuple
+
+
+-- MATH OPERATORS
+----------------------
+addEx = 5 + 4
+subEx = 5 - 4
+multEx = 5 * 4
+divEx = 5 / 4
+
+
+-- PREFIX OPERATORS
+----------------------
+-- Note: Allow sequential arguments
+modEx = mod 5 4
+
+
+-- INFIX OPERATORS
+----------------------
+-- Note: Argument, function, Argument. Wrap function in backticks.
+modEx2 = 5 `mod` 4
+
+
+-- WORKING WITH NEGATIVE NUMBERS
+----------------------
+-- Note: Must be wrapped in parens
+negNumEx = 5 + (-4)
+
+
+-- FUNCTION ARG EXPECTATIONS & TYPE CONVERSION
+----------------------
+-- Note: sqrt :: Floating a => a -> a
+num9 = 9 :: Int
+sqrtOf9 = sqrt (fromIntegral num9)
+
+
+-- MATH FUNCTION EXAMPLES
+----------------------
+piVal = pi
+-- 3.141592653589793
+
+ePow9 = exp 9
+-- 8103.083927575384
+
+logOf9 = log 9
+-- 2.1972245773362196
+
+squared9 = 9 ** 2
+-- 81
+
+truncateVal = truncate 9.999
+-- 9
+
+roundVal = round 9.999
+-- 10
+
+ceilingVal = ceiling 9.999
+-- 10
+
+floorVal = floor 9.999
+-- 9
+
+-- Also: sin, cos, tan, asin, atan, acos, sinh, tanh, cosh, asinh, atanh, acosh
+
+
+-- LOGICAL OPERATORS
+----------------------
+trueAndFalse = True && False
+-- False
+
+trueOrFalse = True || False
+-- True
+
+notTrue = not(True)
+-- False
 
 
 -- LISTS
@@ -121,76 +211,28 @@ pow3List = [3^n | n <- [1..10]]
 multTable = [[x * y | y <- [1..10]] | x <- [1..10]]
 
 
-
--- MATH OPERATORS
+-- TUPLES
 ----------------------
-addEx = 5 + 4
-subEx = 5 - 4
-multEx = 5 * 4
-divEx = 5 / 4
+-- Pairs with elements of any type
+
+-- Define a tuple
+randTuple = (1, "Random Tuples")
+-- Define a tuple
+bobSmith = ("Bob Smith", 52)
+-- Get the first element
+bobsName = fst bobSmith
+-- Get the second element
+bobsAge = snd bobSmith
+-- Create a list of tuples by matching elements between two input lists at each index
+names = ["Bob", "Mary", "Tom"]
+addresses = ["123 Main", "234 North", "567 South"]
+namesNAddress = zip names addresses
 
 
--- PREFIX OPERATORS
+-- LET
 ----------------------
--- Note: Allow sequential arguments
-modEx = mod 5 4
+-- Define a constant with type inferencing
+-- let num7 = 7
 
-
--- INFIX OPERATORS
-----------------------
--- Note: Argument, function, Argument. Wrap function in backticks.
-modEx2 = 5 `mod` 4
-
-
--- WORKING WITH NEGATIVE NUMBERS
-----------------------
--- Note: Must be wrapped in parens
-negNumEx = 5 + (-4)
-
-
--- FUNCTION ARG EXPECTATIONS & TYPE CONVERSION
-----------------------
--- Note: sqrt :: Floating a => a -> a
-num9 = 9 :: Int
-sqrtOf9 = sqrt (fromIntegral num9)
-
-
--- MATH FUNCTION EXAMPLES
-----------------------
-piVal = pi
--- 3.141592653589793
-
-ePow9 = exp 9
--- 8103.083927575384
-
-logOf9 = log 9
--- 2.1972245773362196
-
-squared9 = 9 ** 2
--- 81
-
-truncateVal = truncate 9.999
--- 9
-
-roundVal = round 9.999
--- 10
-
-ceilingVal = ceiling 9.999
--- 10
-
-floorVal = floor 9.999
--- 9
-
--- Also: sin, cos, tan, asin, atan, acos, sinh, tanh, cosh, asinh, atanh, acosh
-
-
--- LOGICAL OPERATORS
-----------------------
-trueAndFalse = True && False
--- False
-
-trueOrFalse = True || False
--- True
-
-notTrue = not(True)
--- False
+-- Define a function
+-- let getTriple x = x * 3
