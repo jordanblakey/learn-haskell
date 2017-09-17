@@ -1,3 +1,6 @@
+import Data.List
+import System.IO
+
 main = do
   -- Init the program at entry point main
 

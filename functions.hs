@@ -1,3 +1,6 @@
+import Data.List
+import System.IO
+
 -- Function type declaration (Called a name)
 -- Says: addMe takes Int input, Int input, and produces Int output
 addMe :: Int -> Int -> Int
