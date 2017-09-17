@@ -31,3 +31,22 @@ areStringsEq :: [Char] -> [Char] -> Bool
 areStringsEq [] [] = True
 areStringsEq (x:xs) (y:ys) = x == y && areStringsEq xs ys
 areStringsEq _ _ = False
+
+
+-- Pass a function inside another function
+------------------------------------------
+-- Shows that the function takes an Int and will pass its output
+-- to another function that takes an Int, then return an Int
+doMult :: (Int -> Int) -> Int
+-- pass function and Int argument to function
+doMult func = func 3
+-- store into a constant the return of a function and its argument (another function)
+num3Times4 = doMult times4
+
+--
+getAddFunc :: Int -> (Int -> Int)
+getAddFunc x y = x + y
+adds3 = getAddFunc 3
+fourPlus3 = adds3 4
+
+threePlusList = map adds3 [1,2,3,4,5]
