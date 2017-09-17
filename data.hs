@@ -46,3 +46,5 @@ data Shape = Circle Float Float Float | Rectangle Float Float Float Float
 area :: Shape -> Float
 area (Circle _ _ r) = pi * r ^ 2
 area (Rectangle xt yt xb yb) = (abs (xb - xt)) * (abs (yt - yb))
+
+sumValue = putStrln (show (1+2))
