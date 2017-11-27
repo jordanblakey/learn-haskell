@@ -42,6 +42,7 @@ Open source contribution to Haskell is very active with a wide range of packages
 
 
 ## Learn You Haskell: Getting Started
+``` haskell
 -- Prelude> 
 -- Every expression is: it = expression
 -- In other words each REPL input is reassigning the variable 'it'
@@ -137,7 +138,7 @@ getLen xs = sum [1 | _ <- xs] -- Create a list of equal length to input of all 1
 removeNonUppercase st = [ c | c <- st, elem c ['A'..'Z']] -- IdontLIKEEGGS -> ILIKEEGGS
 xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,11,3,2,6,7]]
 evensFromListOfLists xxs = [[ x | x <- xs, even x ] | xs <- xxs]
-
+```
 
 ## Tryhaskell.com Command History
 ``` haskell
