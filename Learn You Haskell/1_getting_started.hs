@@ -1,6 +1,6 @@
-module Baby where
+module GettingStarted where
 
--- Prelude> 
+-- Prelude>
 -- Every expression is: it = expression
 -- In other words each REPL input is reassigning the variable 'it'
 
